@@ -1,3 +1,3 @@
-# streamTranslate
+# twitch-chat-translator
 
 Translate twitch chat
