@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="app.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta
+      name="description"
+      content="Twitch chat translator app"
+    />
+    <title>Translator App</title>
+    <script src="twitchChatTranslator.js"></script>
+  </head>
+  <body>
+    <section class="topbar">
+        <header>
+            <button type="button" class="cog" onclick="settingsToggle()"><i class="cog_icon"></i></button>
+        </header>
+        <section class="settings">
+            <div class="name_input">
+                <p> Twitch Channel: </p>
+                <input type="text" id="channel" value="alkepo"/>
+            </div>
+            <div class="name_input">
+                <p> Your Username: </p>
+                <input type="text" id="username" value="alkepo"/>
+            </div>
+            <section class="languages">
+                <div class="lang_input">
+                    <p> Channel lan: </p>
+                    <input type="text" id="foreignLang" value="en"/>
+                </div>       
+                <div class="lang_input">
+                    <p> Your lang: </p>
+                    <input type="text" id="nativeLang" value="es"/>
+                </div>
+            </section>   
+            <button type="button" class="save" onclick='setUp()'>Save</button>
+        </section>
+    </section>
+    <main class="chat">
+        <section class="messages">
+        </section>
+        <footer class="chat_interactions">
+            <button type="button" class="refresh" onclick='refresh()'><i class="refresh_icon"></i></button>
+            <input type="text" id="message" class="message"></input>
+            <button type="button" class="send" onclick='chat()'>Chat</button>
+        </footer>
+    </main>
+    <footer class="logs"> Footer 
+    </footer>
+  </body>
+  
+  <script src="app.js"></script>
+</html>
